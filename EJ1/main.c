@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void){ // Vale sin poner void
+int main(){ 
     printf("Hello World from C! \n");
     return 0;
 }
