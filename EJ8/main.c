@@ -21,7 +21,8 @@ int main(){
 	restar(&c3, &c1);
 	imprimir(c3);
 
-	printf("c3 escrito de otra manera es:\t"); imprimir2(c3);
+	printf("c3 escrito de otra manera es:\t"); 
+	imprimir2(c3);
 	return 0;
 }
 
