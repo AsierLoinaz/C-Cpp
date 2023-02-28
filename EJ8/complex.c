@@ -30,3 +30,8 @@ void imprimir2(Complex c){
         printf("%.2f\n", c.real); 
     }
 }
+
+Complex sumMalloc(Complex c1, Complex *c2){
+    Complex nuevo = {c1.real + (*c2).real, c1.im + (*c2).im};
+    return nuevo;
+}

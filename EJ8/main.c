@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include "complex.h"
+#include <stdlib.h>
 
 int main(){
 	Complex c1 = {1, 2};
@@ -23,6 +24,23 @@ int main(){
 
 	printf("c3 escrito de otra manera es:\t"); 
 	imprimir2(c3);
+
+	// Ejercicio 10
+	Complex* c4 = (Complex*) malloc(sizeof(Complex));
+
+	(*c4).real = 1;
+	(*c4).im = 1;
+
+	Complex c5 = sumMalloc(c1, c4);
+	imprimir(c5);
+
+	restar(&c5, c4);
+
+	imprimir(c5);
+
+	free(c4);
+	c4 = NULL;
+
 	return 0;
 }
 

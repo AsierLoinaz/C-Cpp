@@ -17,5 +17,8 @@ void restar(Complex *c1, Complex *c2);
 
 void imprimir2(Complex c);
 
+Complex sumMalloc(Complex c1, Complex *c2);
+
+
 
 #endif
