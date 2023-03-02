@@ -57,7 +57,9 @@ void escalar(int a[], Point *p, int size){
     }
 
 }
-
+/// @brief Imprime todos los puntos de un array como (x, y)
+/// @param p array de puntos 
+/// @param size del array
 void printPoints(Point p[], int size){
 
     for (int i = 0; i < size; i++){    
