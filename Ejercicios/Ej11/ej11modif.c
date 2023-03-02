@@ -68,7 +68,7 @@ void escalar(int a[], Point* p[], int size){
         p[i]->x *= a[i];
         p[i]->y *= a[i];
 
-        p++;
+     //   p++;
     }
 
 }
