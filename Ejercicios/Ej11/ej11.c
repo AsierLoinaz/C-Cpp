@@ -40,6 +40,7 @@ int main(){
     printPoints(p, 3);
 
     escalar(a, p, 3);
+    printf("\n"); 
 
     printPoints(p, 3);
 
