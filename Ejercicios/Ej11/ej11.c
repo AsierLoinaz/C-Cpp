@@ -10,7 +10,7 @@ typedef struct
 } Point;
 
 void escalar(int a[], Point *p, int size);
-void printPoint(Point p);
+void printPoints(Point p[], int size);
 
 int main(){
 
@@ -37,15 +37,11 @@ int main(){
     * (*(p+2)).x = 1
     * (*(p+2)).y = 2
 */
-    printPoint(p[0]);
-    printPoint(p[1]);
-    printPoint(p[2]);
+    printPoints(p, 3);
 
     escalar(a, p, 3);
 
-    printPoint(p[0]);
-    printPoint(p[1]);
-    printPoint(p[2]);
+    printPoints(p, 3);
 
     return 0;
 }
@@ -62,6 +58,8 @@ void escalar(int a[], Point *p, int size){
 
 }
 
-void printPoint(Point p){
-    printf("(%i, %i)\n", p.x, p.y); 
+void printPoints(Point p[], int size){
+
+    for (int i = 0; i < size; i++){    
+    printf("(%i, %i)\n", p[i].x, p[i].y); }
 }
