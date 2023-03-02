@@ -44,6 +44,9 @@ int main(){
 
     printPoints(p, 3);
 
+    free(p);
+    p = NULL;
+
     return 0;
 }
 
