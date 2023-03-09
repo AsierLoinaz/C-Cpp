@@ -19,6 +19,7 @@ int main(){
             a[i][j] = rand();
         }
     }
+    printf("Parte a\n"); 
     printMatrix1(a);
     printf("\n"); 
 
@@ -37,7 +38,7 @@ int main(){
         }
     }
 
-    
+    printf("Parte b\n"); 
     printMatrix2(b);
     printf("\n"); 
 
@@ -58,9 +59,10 @@ int main(){
     for (int i = 0; i < X; i++){
         for (int j = 0; j < Y; j++){
             c[i][j] = rand();
+            
         }
     }
-
+    printf("Parte c\n"); 
     printMatrix3(c);
 
     for (int i = 0; i < X; i++){
@@ -95,7 +97,7 @@ void printMatrix2(int* b[X]){
     int linea = 0;
 
     for (int i = 0; i < X; i++){
-        printf("\n");
+        printf("\n"); 
         for (int j = 0; j < Y; j++){
             
             printf("[%i]", b[i][j]);
