@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define PARAM_CONFIG "-configFile"
 
 int main(int argc, char const *argv[])
 {
@@ -16,8 +17,8 @@ int main(int argc, char const *argv[])
         printf("%s\n", argv[i]); 
     }}  
 
-    // Comparar el primer argumento con el texto -configFile
-    if (strcmp(argv[1], "-configFile") == 0){
+    // Comparar el primer argumento con la constante CONFIG_FILE
+    if (strcmp(argv[1], PARAM_CONFIG) == 0){
         printf("Fichero de configuracion establecido\n"); 
     }
 
