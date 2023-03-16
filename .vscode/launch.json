@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Programacion/C-Cpp/Ejercicios/Ej15",
-      "program": "d:/Programacion/C-Cpp/Ejercicios/Ej15/build/Debug/outDebug",
+      "cwd": "c:/Users/asilo/Desktop/Programacion/C C++/Ejercicios/Ej19",
+      "program": "c:/Users/asilo/Desktop/Programacion/C C++/Ejercicios/Ej19/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
