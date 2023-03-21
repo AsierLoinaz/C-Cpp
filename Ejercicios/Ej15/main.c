@@ -102,6 +102,16 @@ float calcularMedia(Asignatura asigs[], int size){
     
 }
 
+/// @brief libera la memoria reservada de los nombres de las asignaturas
+/// @param asigs array de asignaturas
+/// @param size 
+void liberarMemoria(Asignatura *asigs, int size){
+
+    for (int i = 0; i < size; i++){
+        free(asigs[i].nombre);
+    }
+
+}
 
 int main(){
 
@@ -140,7 +150,7 @@ int main(){
 
     } while (input != 'q');
     
-    
+    liberarMemoria(asignaturas, numAsignaturas);
 
     return 0;
 }
