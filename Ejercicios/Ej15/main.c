@@ -8,7 +8,7 @@
 typedef struct 
 {
     int id;
-//    char nombre[10];
+    char* nombre;
     float nota;
 } Asignatura;
 
@@ -30,6 +30,7 @@ char MostrarMenu(){
 }
 
 void introducir(Asignatura *asig){
+    system("cls");
     char str[MAX_LINE];
     int id;
     float nota;
@@ -43,31 +44,53 @@ void introducir(Asignatura *asig){
 //  * sscanf(cadena donde estaba la respuesta, formtao y tipo, direccion de la variable destino)
     sscanf(str, "%i", &id); // como es un int, hay que hacer cast con sscanf
 
+    fflush(stdout);
 
-    printf("Nota: \t");
+    printf("Nota:\t");
     fgets(str, MAX_LINE, stdin);
     sscanf(str, "%f", &nota); 
     
     asig->id = id;
     asig->nota = nota;
 
+// --------------------------------------------- Modificacion
+    
+    char* in_nombre = malloc((MAX_LINE) * sizeof(char));
+
+    printf("Nombre:\t");
+    fgets(str, MAX_LINE, stdin); // Esto coge el \n
+    sscanf(str, "%s", in_nombre); // quita el \n
+
+    int size = strlen(in_nombre);
+    asig->nombre = malloc((size + 1) * sizeof(char)); // suma 1 al size para dejar el \0
+    strcpy(asig->nombre, in_nombre); // strcyp(destino, origen)
+    free(in_nombre);
+
+   fflush(stdout);
+   printf("\nSe ha guardado %s correctamente\n\n", asig->nombre); 
+
 }
+
+
 /// @brief Imprime la lista de las asignaturas
 /// @param asignaturas 
 /// @param size del array 
 void mostrarLista(Asignatura asignaturas[], int size){
+    system("cls");
     printf("Mostrando lista de asignaturas...\n"); 
     for (int i = 0; i < size; i++){
-        printf("Id: %i, Nota: %.2f\n", asignaturas[i].id, asignaturas[i].nota); 
+        printf("Id: %i, Nombre: %s,  Nota: %.2f\n", asignaturas[i].id, asignaturas[i].nombre, asignaturas[i].nota); 
     }
     printf("\n"); 
 }
+
+
 /// @brief Calcula la media de las asignaturas
 /// @param asigs array de asignaturas 
 /// @param size del array
 /// @returns media
 float calcularMedia(Asignatura asigs[], int size){
-
+    system("cls");
     int suma = 0;
 
     for (int i = 0; i < size; i++)
@@ -82,7 +105,6 @@ float calcularMedia(Asignatura asigs[], int size){
 
 int main(){
 
-    
     Asignatura asignaturas[MAX_ASIGNATURAS];
     int numAsignaturas = 0;
     float media;
