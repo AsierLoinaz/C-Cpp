@@ -53,24 +53,24 @@ int main(void) // Extra
 	vertices2[0] = v0; vertices2[1] = v1; vertices2[2] = v2; vertices2[3] = v3; vertices2[4] = v4; 
 	Poligono polig2 = {nVertices2, vertices2};
 
-	// printf("Polig1\n"); 
-	// imprimirPoligono(polig);
-	// printf("Polig2\n"); 
-	// imprimirPoligono(polig2);
-	// printf("Polig1 despues de copiar en el polig2\n"); 
-	// copiarPoligono(&polig, polig2);
+	printf("Polig1\n"); 
+	imprimirPoligono(polig);
+	printf("Polig2\n"); 
+	imprimirPoligono(polig2);
+	printf("Polig1 despues de copiar en el polig2\n"); 
+	copiarPoligono(&polig, polig2);
 
 
 
-	// imprimirPoligono(polig);
+	imprimirPoligono(polig);
 
 
 
-//	printf("Polig2\n");
-//	imprimirPoligono(polig2); 
+	printf("Polig2\n");
+	imprimirPoligono(polig2); 
 	anadirVertice(&polig2, v5);
-//	printf("Polig2 tras anadir v5\n");
-//	imprimirPoligono(polig2); 
+	printf("Polig2 tras anadir v5\n");
+	imprimirPoligono(polig2); 
 
 
  
