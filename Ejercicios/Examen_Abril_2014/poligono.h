@@ -12,7 +12,6 @@ typedef struct
 void imprimirPoligono(Poligono poli);
 float perimetro(Poligono poli);
 void liberar(Poligono* poli);
-void liberarVertices(Poligono* poli);
 void anadirVertice(Poligono* poli, Punto v);
 void copiarPoligono(Poligono* poli1, Poligono poli2);
 #endif

@@ -22,31 +22,24 @@ float perimetro(Poligono poli){
 
 void liberar(Poligono* poli){
     for (int i = 0; i < poli->numVertices; i++){
-        free(&poli->vertices[i]);
+        free(poli->vertices);
     }
     free(poli);
 }
 
-void liberarVertices(Poligono* poli){
-    for (int i = 0; i < poli->numVertices; i++){
-        free(&poli->vertices[i]);
-    }
-   
-}
-
 void anadirVertice(Poligono* poli, Punto v){
     int nVerticesOrig = poli->numVertices;
-    int i;
+   
     Punto* temp = (Punto*) malloc((nVerticesOrig+1) * sizeof(Punto));
-    for (i = 0; i < poli->numVertices; i++){
+    for (int i = 0; i < poli->numVertices; i++){
         temp[i] = poli->vertices[i];
     }
   
-    temp[nVerticesOrig+1] = v;
+    temp[nVerticesOrig] = v;
     
     
     
-    liberarVertices(poli);
+    free(poli->vertices);
     
     poli->numVertices++;
     poli->vertices = (Punto*) malloc(poli->numVertices * sizeof(Punto));
@@ -57,11 +50,8 @@ void anadirVertice(Poligono* poli, Punto v){
         
         poli->vertices[j] = temp[j];
         imprimirPunto(poli->vertices[j]);
-       // free(&temp[j]);
+        free(&temp[j]);
     }
-    // poli->vertices[i+1].x = v.x;
-    // poli->vertices[i+1].y = v.y;
-   // imprimirPunto(poli->vertices[poli->numVertices]);
 }
 
 /// @brief Se copia en poli1 los datos de poli2
