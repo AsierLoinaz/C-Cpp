@@ -15,7 +15,7 @@ float perimetro(Poligono poli){
         perim += distancia(poli.vertices[i], poli.vertices[i-1]);
     }
 
-    perim += distancia(poli.vertices[0], poli.vertices[poli.numVertices]);
+    perim += distancia(poli.vertices[0], poli.vertices[poli.numVertices-1]);
 
     return perim;
 }
@@ -49,7 +49,7 @@ void anadirVertice(Poligono* poli, Punto v){
     for (int j = 0; j < poli->numVertices; j++){
         
         poli->vertices[j] = temp[j];
-        imprimirPunto(poli->vertices[j]);
+//        imprimirPunto(poli->vertices[j]);
         free(&temp[j]);
     }
 }
@@ -60,7 +60,7 @@ void anadirVertice(Poligono* poli, Punto v){
 void copiarPoligono(Poligono* poli1, Poligono poli2){
 
     int nVertices = poli2.numVertices;
-    liberarVertices(poli1);
+    free(poli1->vertices);
     poli1->numVertices = nVertices;
     poli1->vertices = (Punto*) malloc(nVertices * sizeof(Punto));
     for (int i = 0; i < nVertices; i++){

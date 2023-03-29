@@ -12,29 +12,40 @@
 
 
 
-int main(void) // Extra
+
+
+
+int main(int argc, char const *argv[]) // Extra
 {
-	// Punto p1 = {1,2};
-	// Punto p2 = {3, 4};	
-	// printf("Valores inciales\n"); 
-	// imprimirPunto(p1);
-	// imprimirPunto(p2);
-	// printf("Distancia antes de trasladar\n"); 
-	// float dist = distancia(p1, p2);
+	Punto p1 = {1, 2};
+	Punto p2 = {3, 4};
 
-	// printf("Distancia = %.2f\n", dist); 
+	
 
-	// printf("Distancia despues de trasladar\n"); 
-	// trasladarXY(&p1, &p2, 5, 6);
-	// dist = distancia(p1, p2);
-	// printf("Distancia = %.2f\n", dist); 
+//* Recibir puntos por parametro
 
-	// printf("Valores despues de trasladar\n"); 
-	// imprimirPunto(p1);
-	// imprimirPunto(p2);
+	// sscanf(argv[1], "%i", &p1.x);
+	// sscanf(argv[2], "%i", &p1.y);
+	// sscanf(argv[3], "%i", &p2.x);
+	// sscanf(argv[4], "%i", &p2.y);
 
-	// float perim = perimetro(polig);
-	// printf("%.3f\n", perim);
+	printf("Valores inciales\n"); 
+	imprimirPunto(p1);
+	imprimirPunto(p2);
+	printf("Distancia antes de trasladar\n"); 
+	float dist = distancia(p1, p2);
+
+	printf("Distancia = %.2f\n", dist); 
+
+	printf("Distancia despues de trasladar\n"); 
+	trasladarXY(&p1, &p2, 5, 6);
+	dist = distancia(p1, p2);
+	printf("Distancia = %.2f\n", dist); 
+
+	printf("Valores despues de trasladar\n"); 
+	imprimirPunto(p1);
+	imprimirPunto(p2);
+
 
 	Punto v0 = {1, 2};
 	Punto v1 = {3,4};
@@ -48,6 +59,8 @@ int main(void) // Extra
 	vertices[0] = v0; vertices[1] = v1; vertices[2] = v2; vertices[3] = v3;
 	Poligono polig = {nVertices, vertices};
 
+	
+
 	int nVertices2 = 5;
 	Punto* vertices2 = malloc(nVertices2 * sizeof(Punto));
 	vertices2[0] = v0; vertices2[1] = v1; vertices2[2] = v2; vertices2[3] = v3; vertices2[4] = v4; 
@@ -55,6 +68,8 @@ int main(void) // Extra
 
 	printf("Polig1\n"); 
 	imprimirPoligono(polig);
+	float perim = perimetro(polig);
+	printf("Perimetro: %.3f\n", perim);
 	printf("Polig2\n"); 
 	imprimirPoligono(polig2);
 	printf("Polig1 despues de copiar en el polig2\n"); 
