@@ -56,7 +56,7 @@ void leerProductos(Producto* productos[], char* fichero){
 
 	FILE* file = fopen(fichero, "r");
 	for (int i = 0; i < 5; i++){
-		fscanf(file, "%i %15s %f", &productos[i]->ref, &productos[i]->nombre, &productos[i]->precio);
+		fscanf(file, "%i %15s %f", &productos[i]->ref, productos[i]->nombre, &productos[i]->precio); // * Productos[i]->nombre es ya un array (equivale a puntero) por lo que no se pone &
 		 // ! fscanf no lee espacios en blanco. 
 		 // ! %15 es un string de 15 caracteres como maximo
 	}
