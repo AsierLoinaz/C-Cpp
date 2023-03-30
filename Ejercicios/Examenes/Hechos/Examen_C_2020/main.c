@@ -42,7 +42,10 @@ int main(void)
 	modificarCarrito(&c, 1, 6, 5);
 	imprimirTicket(c, 5);
 
-
+	leerProductos(comprados, "productos.txt");
+	for (int i = 0; i < 5; i++){
+		imprimirProducto(*comprados[i]);
+	}
 
 
 
@@ -51,8 +54,10 @@ int main(void)
 
 void leerProductos(Producto* productos[], char* fichero){
 
-	FILE* fichero = fopen(fichero, "r");
+	FILE* file = fopen(fichero, "r");
 	for (int i = 0; i < 5; i++){
-
+		fscanf(file, "%i %15s %f", &productos[i]->ref, &productos[i]->nombre, &productos[i]->precio);
+		 // ! fscanf no lee espacios en blanco. 
+		 // ! %15 es un string de 15 caracteres como maximo
 	}
 }
