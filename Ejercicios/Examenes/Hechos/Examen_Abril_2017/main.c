@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "censo.h"
 #include "persona.h"
+#include <string.h>
 //#define EDAD_MIN 18
 
 void crearInforme(GrupoPersonas gp, char* fichero);
@@ -45,6 +46,11 @@ int main(int argc, char const *argv[])
 		printf("%s\n", lista[i]);  
 	} 
 	return 0;
+
+	free(lista);
+	free(menores30.personas);
+	
+
 }
 
 

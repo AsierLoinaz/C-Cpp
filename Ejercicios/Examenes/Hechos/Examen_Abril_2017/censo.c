@@ -87,13 +87,14 @@ int cuantosNombres(Persona* ap, int tamanyo, char letra){
 char** listadoNombres(Persona* ap, int tamanyo, char letra){
     
     char** lista;
-    int contador = 0;
+    int j = 0;
     int coinciden = cuantosNombres(ap, tamanyo, letra);
     lista = (char**) malloc(sizeof(char*) * coinciden);
     for (int i = 0; i < tamanyo; i++){
         if (ap[i].nombre[0] == letra){
-        strcpy(lista[contador], ap[i].nombre);
-        contador++;
+            lista[j] = (char*) malloc(sizeof(char));
+            strcpy(lista[j], ap[i].nombre);
+            j++;
         }
     }
     return lista;
