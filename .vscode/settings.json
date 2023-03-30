@@ -35,6 +35,9 @@
   ],
   "C_Cpp_Runner.useAddressSanitizer": false,
   "files.associations": {
-    "math.h": "c"
+    "math.h": "c",
+    "censo.h": "c",
+    "random": "c",
+    "array": "c"
   }
 }
