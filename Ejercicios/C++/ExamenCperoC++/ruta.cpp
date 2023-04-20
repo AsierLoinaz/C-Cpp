@@ -53,12 +53,20 @@ int Punto::getX(){ return this->x; }
 int Punto::getY(){ return this->y; }
 Punto* Punto::getSiguiente(){ return this->siguiente; }
 
-void Punto::setSigiente(Punto p){ 
+void Punto::setSiguiente(Punto p){ 
     Punto* nuevo = new Punto(p.getNombre(), p.getX(), p.getY());
     this->siguiente = nuevo;
  }
 
+void Punto::setX(int x){
+    this->x = x;
+}
+void Punto::setY(int y){
+    this->y = y;
+}
 
+
+/// RUTA
 
 Ruta::Ruta(){
 
@@ -70,8 +78,16 @@ Ruta::Ruta(int id, Punto inicial, Punto ultimo){
 }
 Ruta::~Ruta(){
 
+// TODO 
     
 }
+
+int Ruta::getId(){ return this->id; }
+void Ruta::setId(int id){ this->id = id; }
+Punto* Ruta::getInicial(){return this->inicial; }
+void Ruta::setInicial(Punto p){}// TODO 
+Punto* Ruta::getFinal(){ return this->Final; }
+void Ruta::setFinal(Punto p){} // TODO;
 
 /// @brief Añade un nuevo punto a la ruta y lo pone en la ultima posicion
 /// @param p 
@@ -83,7 +99,7 @@ void Ruta::anyadirPunto(Punto p){
         this->inicial = nuevo;
     } 
     else {
-     this->Final->setSigiente(*nuevo);
+     this->Final->setSiguiente(*nuevo);
     }
 
     this->Final = nuevo;

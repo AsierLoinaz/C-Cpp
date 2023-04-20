@@ -19,9 +19,11 @@ namespace estructuras{
         float distancia(Punto p2);
         char* getNombre();
         int getX();
+        void setX(int x);
         int getY();
+        void setY(int y);
         Punto* getSiguiente();
-        void setSigiente(Punto p);
+        void setSiguiente(Punto p);
 
     
     };
@@ -39,9 +41,9 @@ namespace estructuras{
         Ruta(int id, Punto inicial, Punto Final);
         ~Ruta();
         int getId();
-        void setId();
+        void setId(int id);
         Punto* getInicial();
-        void setInicial();
+        void setInicial(Punto p);
         Punto* getFinal();
         void setFinal(Punto p);
         void anyadirPunto(Punto p);
