@@ -79,6 +79,17 @@ Ruta::Ruta(int id, Punto inicial, Punto ultimo){
 Ruta::~Ruta(){
 
 // TODO 
+/*
+    Idea en pseudocodigo con recursividad
+
+        void liberarPuntos(Punto siguiente){
+            if (siguiente.siguiente == null){
+                delete siguiente;
+            } else{
+                liberarPuntos(siguiente)
+            }
+        }
+*/
     
 }
 
