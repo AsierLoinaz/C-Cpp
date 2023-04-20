@@ -83,7 +83,7 @@ void Ruta::anyadirPunto(Punto p){
         this->inicial = nuevo;
     } 
     else {
-     this->Final->setSigiente(p);
+     this->Final->setSigiente(*nuevo);
     }
 
     this->Final = nuevo;
