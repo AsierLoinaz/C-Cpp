@@ -1,5 +1,6 @@
 #include "persona.h"
 #include <string.h>
+#include <iostream>
 
 
 Persona::Persona(){
@@ -34,6 +35,10 @@ Persona::~Persona(){
     delete[] this->nombre;
 }
 
+void Persona::diHola(){
+    std::cout << "Ey, soy una persona" << std::endl;
+}
+
 
 Alumno::Alumno(int numAsignaturas, float* notas){
     this->numAsignaturas = numAsignaturas;
@@ -65,4 +70,8 @@ Alumno::Alumno(int edad, char* nombre, int numAsignaturas, float* notas) : Perso
 
 Alumno::~Alumno(){
     delete[] this->notas;
+}
+
+void Alumno::diHola(){
+    std::cout << "Ey, soy un universitario. A este truco lo llamo dejar la cararrera" << std::endl;
 }

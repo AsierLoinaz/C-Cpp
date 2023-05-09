@@ -14,6 +14,7 @@ class Persona{
         ~Persona();
         int getEdad();
         char* getNombre();
+        virtual void diHola();
 };
 
 class Alumno : public Persona{
@@ -31,6 +32,7 @@ class Alumno : public Persona{
         ~Alumno();
         int getNumAsignaturas();
         float* getNotas();
+        virtual void diHola();
     
 
 };
