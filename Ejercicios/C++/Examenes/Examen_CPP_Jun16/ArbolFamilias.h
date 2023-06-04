@@ -8,7 +8,20 @@
 
 
 class ArbolFamilia{
+    protected:
+        int nFamilias;
+        Familia* familia[MAX_FAMILIAS];
 
+
+    public:
+        ArbolFamilia();
+        ArbolFamilia(const ArbolFamilia& arbol);
+        ~ArbolFamilia();
+
+        void anadirFamilia(Familia* f);
+        void imprimir()const;
+        int contarMenoresEdad(int edad)const;
+        Miembro** getConyugesInicial(int& nMiembros, char inicial);
 };
 
 

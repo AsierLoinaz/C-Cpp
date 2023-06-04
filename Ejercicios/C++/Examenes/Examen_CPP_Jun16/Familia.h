@@ -25,6 +25,7 @@ public:
 
     char* getNombre() const;
     virtual void imprimir() const ;
+    virtual int contarMenores(int edad)const;
 
 
 };

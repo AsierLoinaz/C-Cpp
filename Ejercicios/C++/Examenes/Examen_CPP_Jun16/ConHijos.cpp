@@ -63,3 +63,14 @@ void ConHijos::imprimir() const{
     }
     cout << "---" << endl;
 }
+
+
+int ConHijos::contarMenores(int edad)const{
+    int cuantos = Familia::contarMenores(edad);
+
+    for (int i = 0; i < this->nHijos; i++){
+        if (this->hijos[i]->getEdad() < edad) cuantos++;
+    }
+
+    return cuantos;
+}

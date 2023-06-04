@@ -1,6 +1,7 @@
 #include "Miembro.h"
 #include "Familia.h"
 #include "ConHijos.h"
+#include "ArbolFamilias.h"
 
 #include <iostream>
 using namespace std;
@@ -32,6 +33,12 @@ int main()
 	c1.setHijo(&pablo, 2);
 	// cout << f1.getNombre() << endl;
 	c1.imprimir();
+
+
+
+	
+
+
 
 	return 0;
 }

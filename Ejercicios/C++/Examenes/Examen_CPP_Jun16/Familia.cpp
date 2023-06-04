@@ -73,3 +73,11 @@ void Familia::imprimir() const{
 
 
 }
+
+int Familia::contarMenores(int edad)const{
+    int cuantos = 0;
+    if (this->conyugeH->getEdad() < edad) cuantos++;
+    if (this->conyugeM->getEdad() < edad) cuantos++;
+
+    return cuantos;
+}
