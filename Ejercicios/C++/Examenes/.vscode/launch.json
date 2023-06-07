@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Programacion/C-Cpp/Ejercicios/C++/Examenes/Examen_Junio_2014",
-      "program": "d:/Programacion/C-Cpp/Ejercicios/C++/Examenes/Examen_Junio_2014/build/Debug/outDebug",
+      "cwd": "d:/Programacion/C-Cpp/Ejercicios/C++/Examenes/Examen 2021",
+      "program": "d:/Programacion/C-Cpp/Ejercicios/C++/Examenes/Examen 2021/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
